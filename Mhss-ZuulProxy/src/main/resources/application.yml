@@ -1,0 +1,14 @@
+server:
+  port: 8090
+zuul:
+  routes:
+    studentservice: 
+      path: /api/**
+      service-id: studentservice
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8089/eureka/
+spring:
+  application:
+    name: zuul-service
